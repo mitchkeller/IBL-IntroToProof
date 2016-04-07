@@ -1,78 +1,4 @@
-\documentclass[11pt]{article}
-
-\usepackage{amsfonts}
-\usepackage{amsmath}
-\usepackage{wasysym}
-\usepackage{amssymb}
-\usepackage{stmaryrd}
-\usepackage{amsthm}
-\usepackage{fancyhdr}
-\usepackage[margin=1in]{geometry}
-\usepackage[hang,flushmargin,symbol*]{footmisc}
-\usepackage{color}
-\definecolor{darkblue}{rgb}{0, 0, .6}
-\definecolor{grey}{rgb}{.7, .7, .7}
-\usepackage[breaklinks]{hyperref}
-\hypersetup{
-	colorlinks=true,
-	linkcolor=darkblue,
-	anchorcolor=darkblue,
-	citecolor=darkblue,
-	pagecolor=darkblue,
-	urlcolor=darkblue,
-	pdftitle={},
-	pdfauthor={}
-}
-
-\newcommand{\dom}{\operatorname{Dom}}
-\newcommand{\codom}{\operatorname{Codom}}
-\newcommand{\range}{\operatorname{Rng}}
-
-\pagestyle{fancy}
-
-\lhead{\scriptsize Notes for an Introduction to Proof Course (Version Spring 2013)}
-\rhead{\scriptsize Instructor: \href{http://danaernst.com}{D.C. Ernst}}
-\lfoot{\scriptsize This work is an adaptation of notes written by Stan Yoshinobu of Cal Poly and Matthew Jones of California State University, Dominguez Hills.} 
-\cfoot{}
-
-\renewcommand{\headrulewidth}{0.4pt} 
-\renewcommand{\footrulewidth}{0.4pt} 
-
-\theoremstyle{definition}
-\newtheorem{theorem}{Theorem}[section]
-\newtheorem{acknowledgement}[theorem]{Acknowledgement}
-\newtheorem{algorithm}[theorem]{Algorithm}
-\newtheorem{axiom}[theorem]{Axiom}
-\newtheorem{case}[theorem]{Case}
-\newtheorem{claim}[theorem]{Claim}
-\newtheorem{conclusion}[theorem]{Conclusion}
-\newtheorem{condition}[theorem]{Condition}
-\newtheorem{conjecture}[theorem]{Conjecture}
-\newtheorem{corollary}[theorem]{Corollary}
-\newtheorem{criterion}[theorem]{Criterion}
-\newtheorem{definition}[theorem]{Definition}
-\newtheorem{example}[theorem]{Example}
-\newtheorem{exercise}[theorem]{Exercise}
-\newtheorem{journal}[theorem]{Journal}
-\newtheorem{lemma}[theorem]{Lemma}
-\newtheorem{notation}[theorem]{Notation}
-\newtheorem{problem}[theorem]{Problem}
-\newtheorem{proposition}[theorem]{Proposition}
-\newtheorem{remark}[theorem]{Remark}
-\newtheorem{solution}[theorem]{Solution}
-\newtheorem{summary}[theorem]{Summary}
-\newtheorem{question}[theorem]{Question}
-
-\begin{document}
-
-\addtocounter{section}{4}
-
-\begin{section}{Relations and Functions}
-
-\addtocounter{subsection}{4}
-\addtocounter{theorem}{92}
-
-\begin{subsection}{Compositions and Inverses}
+\begin{section}{Compositions and Inverses}
 
 \begin{definition}
 If $f:X\to Y$ and $g:Y\to Z$ are functions, then a new function $g\circ f:X\to Z$ can be defined by $(g\circ f)(x)=g(f(x))$ for all $x\in\dom(f)$.
@@ -92,11 +18,11 @@ In each case, give examples of finite sets $X$, $Y$, and $Z$, and functions $f:X
 \end{enumerate}
 \end{exercise}
 
-\begin{theorem}[*]
+\begin{theorem}
 If $f:X\to Y$ and $g:Y\to Z$ are both functions that are onto, then $g\circ f$ is also onto.
 \end{theorem}
 
-\begin{theorem}[*]
+\begin{theorem}
 If $f:X\to Y$ and $g:Y\to Z$ are both functions that are one-to-one, then $g\circ f$ is also one-to-one.
 \end{theorem}
 
@@ -133,11 +59,11 @@ Provide an example of a function $f:X\to Y$ such that $f^{-1}$ is \emph{not} a f
 Provide an example of a function $f:X\to Y$ such that $f^{-1}$ is a function. A bubble diagram is sufficient.
 \end{exercise}
 
-\begin{theorem}[*]
+\begin{theorem}
 Let $f:X\to Y$ be a function.  Then $f^{-1}$ is a function iff $f$ is \underline{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }.
 \end{theorem}
 
-\begin{theorem}[*]\label{thm:comp of inverses}
+\begin{theorem}\label{thm:comp of inverses}
 Let $f:X\to Y$ be a function and suppose that $f^{-1}$ is a function.  Then
 \begin{enumerate}
 \item $(f\circ f^{-1})(x)=x$ for all $x\in Y$, and
@@ -146,26 +72,22 @@ Let $f:X\to Y$ be a function and suppose that $f^{-1}$ is a function.  Then
 (You only need to prove one of these statements; the other is similar.)
 \end{theorem}
 
-\begin{theorem}[*]\label{thm:unique inverse}
+\begin{theorem}\label{thm:unique inverse}
 Let $f:X\to Y$ and $g:Y\to X$ be functions such that $f$ is a one-to-one correspondence.  If $(f\circ g)(x)=x$ for all $x\in Y$ and $(g\circ f)(x)=x$ for all $x\in X$, then $g=f^{-1}$.
 \end{theorem}
 
 \begin{remark}
-The upshot of the previous two theorems is that if $f^{-1}$ is a function, then it is the only one satisfying the two-sided ``undoing'' property exhibited in Theorem \ref{thm:comp of inverses}.
+The upshot of the previous two theorems is that if $f^{-1}$ is a function, then it is the only one satisfying the two-sided ``undoing'' property exhibited in Theorem~\ref{thm:comp of inverses}.
 \end{remark}
 
-The next theorem can be considered to be a converse of Theorem \ref{thm:unique inverse}.
+The next theorem can be considered to be a converse of Theorem~\ref{thm:unique inverse}.
 
-\begin{theorem}[*]
+\begin{theorem}
 Let $f:X\to Y$ and $g:Y\to X$ be functions satisfying $(f\circ g)(x)=x$ for all $x\in Y$ and $(g\circ f)(x)=x$ for all $x\in X$.  Then $f$ is a one-to-one correspondence.
 \end{theorem}
 
-\begin{theorem}[*]
+\begin{theorem}
 Let $f:X\to Y$ and $g:Y\to Z$ be functions.  If $f$ and $g$ are both one-to-one correspondences, then $(g\circ f)^{-1}=f^{-1}\circ g^{-1}$.
 \end{theorem}
 
-\end{subsection}
-
 \end{section}
-
-\end{document}

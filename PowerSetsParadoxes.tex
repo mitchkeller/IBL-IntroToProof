@@ -1,72 +1,4 @@
-\documentclass[11pt]{article}
-
-\usepackage{amsfonts}
-\usepackage{amsmath}
-\usepackage{amssymb}
-\usepackage{stmaryrd}
-\usepackage{amsthm}
-\usepackage{fancyhdr}
-\usepackage[margin=1in]{geometry}
-\usepackage[hang,flushmargin,symbol*]{footmisc}
-\usepackage{color}
-\definecolor{darkblue}{rgb}{0, 0, .6}
-\definecolor{grey}{rgb}{.7, .7, .7}
-\usepackage[breaklinks]{hyperref}
-\hypersetup{
-	colorlinks=true,
-	linkcolor=darkblue,
-	anchorcolor=darkblue,
-	citecolor=darkblue,
-	pagecolor=darkblue,
-	urlcolor=darkblue,
-	pdftitle={},
-	pdfauthor={}
-}
-
-\pagestyle{fancy}
-
-\lhead{\scriptsize Notes for an Introduction to Proof Course (Version Spring 2013)} 
-\rhead{\scriptsize Instructor: \href{http://danaernst.com}{D.C. Ernst}}
-\lfoot{\scriptsize This work is an adaptation of notes written by Stan Yoshinobu of Cal Poly and Matthew Jones of California State University, Dominguez Hills.} 
-\cfoot{}
-\renewcommand{\headrulewidth}{0.4pt} 
-\renewcommand{\footrulewidth}{0.4pt} 
-
-\theoremstyle{definition}
-\newtheorem{theorem}{Theorem}[section]
-\newtheorem{acknowledgement}[theorem]{Acknowledgement}
-\newtheorem{algorithm}[theorem]{Algorithm}
-\newtheorem{axiom}[theorem]{Axiom}
-\newtheorem{case}[theorem]{Case}
-\newtheorem{claim}[theorem]{Claim}
-\newtheorem{conclusion}[theorem]{Conclusion}
-\newtheorem{condition}[theorem]{Condition}
-\newtheorem{conjecture}[theorem]{Conjecture}
-\newtheorem{corollary}[theorem]{Corollary}
-\newtheorem{criterion}[theorem]{Criterion}
-\newtheorem{definition}[theorem]{Definition}
-\newtheorem{example}[theorem]{Example}
-\newtheorem{exercise}[theorem]{Exercise}
-\newtheorem{journal}[theorem]{Journal}
-\newtheorem{lemma}[theorem]{Lemma}
-\newtheorem{notation}[theorem]{Notation}
-\newtheorem{problem}[theorem]{Problem}
-\newtheorem{proposition}[theorem]{Proposition}
-\newtheorem{remark}[theorem]{Remark}
-\newtheorem{solution}[theorem]{Solution}
-\newtheorem{summary}[theorem]{Summary}
-\newtheorem{question}[theorem]{Question}
-
-\begin{document}
-
-\addtocounter{section}{1}
-
-\begin{section}{Set Theory and Topology (Continued)}
-
-\addtocounter{subsection}{1}
-\addtocounter{theorem}{27}
-
-\begin{subsection}{Power Sets and Paradoxes}
+\begin{section}{Power Sets and Paradoxes}
 
 We've already seen that using union, intersection, set difference, and complement we can create new sets (in the same universe) from existing sets.  In this section, we will describe another way to generate new sets; however, the new sets will not ``live" in the same universe this time.
 
@@ -108,15 +40,15 @@ Do your best to describe $\mathcal{P}(\mathbb{N})$.  You cannot write down all o
 It is important to realize that the concepts of \emph{element} and \emph{subset} need to be carefully delineated.  For example, consider the set $A=\{x,y\}$.  The object $x$ is an element of $A$, but the object $\{x\}$ is both a subset of $A$ and an element of $\mathcal{P}(A)$.  This can get confusing rather quickly.  Consider the set $O$ from the previous example.  The set $\{a\}$ happens to be an element of $O$, a subset of $O$, and an element of  $\mathcal{P}(O)$.
 \end{remark}
 
-\begin{theorem}[*]
+\begin{theorem}
 Let $S$ and $T$ be sets.  Then $S\subseteq T$ iff $\mathcal{P}(S)\subseteq \mathcal{P}(T)$.\footnote{To prove this theorem, you have to write two distinct subproofs: $A\implies B$ and $B\implies A$.}
 \end{theorem}
 
-\begin{theorem}[*]
+\begin{theorem}
 Let $S$ and $T$ be sets.  Then $\mathcal{P}(S)\cap\mathcal{P}(T)=\mathcal{P}(S\cap T)$.
 \end{theorem}
 
-\begin{theorem}[*]
+\begin{theorem}
 Let $S$ and $T$ be sets.  Then $\mathcal{P}(S)\cup\mathcal{P}(T)\subseteq \mathcal{P}(S\cup T)$.
 \end{theorem}
 
@@ -160,10 +92,8 @@ If $\mathcal{U}$ is the set of all sets, then what is the relationship between $
 The upshot is that the collection of all sets is \emph{not} a set!  Here are some additional paradoxes.
 
 \begin{problem}
-Pick any two of the paradoxes below and explain why it is a paradox.
+Pick any two of the paradoxes below and for each one explain why it is a paradox.
 \end{problem}
-
-\bigskip
 
 %The following paradoxes are from Dave Richeson.
 \noindent \textbf{Librarian's Paradox.} A librarian is given the unenviable task of creating two new books for the library. Book A contains the names of all books in the library that reference themselves and Book B contains the names of all books in the library that do not reference themselves. But the librarian just created two new books for the library, so their titles must be in either Book A or Book B. Clearly Book A can be listed in Book B, but where should the librarian list Book B?\\
@@ -188,8 +118,4 @@ If I lose this case, I do not have to pay (by the contract).\\
 I must either win or lose the case.\\
 Therefore, I do not have to pay Protagoras.
 
-\end{subsection}
-
 \end{section}
-
-\end{document}

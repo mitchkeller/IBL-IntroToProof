@@ -1,6 +1,6 @@
-\begin{section}{The infinitude of primes}
+\begin{section}{The Infinitude of Primes}
 
-The highlight of this section\footnote{This section is derived from work of \href{http://users.dickinson.edu/~richesod/}{Dave Richeson} of Dickinson College.} is Theorem~\ref{thm:infprimes}, which states that there are infinitely many primes. In case you forgot, here is the definition of a prime number.
+The highlight of this section is Theorem~\ref{thm:infprimes}, which states that there are infinitely many primes. In case you forgot, here is the definition of a prime number.
 
 \begin{definition}
 A natural number $p$ is called \textbf{prime} iff $p$ is divisible by exactly two distinct natural numbers (namely, 1 and $p$ itself).
@@ -18,9 +18,9 @@ There are a few interesting observations to make about Euclid's proposition and 
 
 Prior to tackling a proof of Theorem~\ref{thm:infprimes}, we need to prove a couple lemmas.  The proof of the first lemma is provided for you. 
 
-\begin{lemma-given}\label{lem:divisorsof1}
+\begin{lemma}\label{lem:divisorsof1}
 The only natural number that divides $1$ is $1$.  
-\end{lemma-given}
+\end{lemma}
 
 \begin{proof}
 Let $m$ be a natural number that divides $1$. We know that $m\geq 1$ because 1 is the smallest positive integer. Since $m$ divides $1$, there exists $k\in \mathbb{N}$ such that $1=mk$. Since $k\geq 1$, we see that $mk\geq m$.  But $1=mk$, and so $1\geq m$.  Thus, we have $1\leq m \leq 1$, which implies that $m=1$, as desired.
@@ -37,11 +37,3 @@ There are infinitely many prime numbers.\footnote{\emph{Hint:} Use a proof by co
 \end{theorem}
 
 \end{section}
-
-
-
-%%% Local Variables: 
-%%% mode: latex
-%%% TeX-master: "IntroToProof"
-%%% End: 
-

@@ -17,7 +17,7 @@ It is convenient to borrow function notation to represent predicates.  For examp
 \item $F(x,y):=``x \mbox{ is friends with } y"$
 \end{itemize}
 
-The notation ``$:=$'' is often used in mathematics to show that we are defining something (as opposed to stating something is mathematically equal).  Also, note that the use of the quotation marks above removed some ambiguity.  If we wrote $S(x)=x^2-4=0$, it would look like $S(x)$ equals 0, but actually we want $S(x)$ to represent the whole sentence ``$x^2-4=0$''.
+The notation ``$:=$" is used in mathematics to define something as being equal to something else.  Also, note that the use of the quotation marks above removed some ambiguity.  What would $S(x)=x^2-4=0$ mean?  It looks like $S(x)$ equals 0, but actually we want $S(x)$ to be a whole sentence not a noun. 
 
 One way we can make propositions out of predicates is by assigning specific values to the free variables.  That is, if $P(x)$ is a predicate and $x_0$ is specific value, then $P(x_0)$ is now a proposition (and may be true or false).
 
@@ -40,18 +40,18 @@ The following sentences are both propositions.
 \end{example}
 
 \begin{exercise}
-Determine the truth value of the two propositions from Example \ref{ex:quantified predicates}.  What would it take to prove your answers?
+Determine the truth value of the two propositions from Example~\ref{ex:quantified predicates}.  What would it take to prove your answers?
 \end{exercise}
 
 \begin{definition}
 ``For all" is called the \textbf{universal quantifier} and ``there exists\ldots such that" is called the \textbf{existential quantifier}.
 \end{definition}
 
-The variables in propositions associated with quantifiers are called \textbf{bound variables}.  In order for a sentence containing variables to be a proposition, \emph{all} variables must be bound.  In other words, to be a proposition, all variables need to be quantified so that there is no ambiguity.
+The variables in propositions with quantifiers are called \textbf{bound variables}.  In order for a sentence containing variables to be a proposition, \emph{all} variables must be bound.  That is, all variables need to be quantified.  When all variables are quantified, there is no ambiguity.  (We are not making any claims about whether a proposition is true or false here).
 
 It is important to note that the existential quantifier is making a claim about ``at least one" \emph{not} ``exactly one."    Also, we can replace ``there exists\ldots such that" with phrases (possibly with some other tweaking to the sentence) like ``for some".  It is also worth noting that ``for all", ``for any", ``for every" are used interchangeably in mathematics (even though they might convey slightly different meanings in colloquial language).  
 
-We must also take care that the universe of acceptable values for bound variables is clear.  Consider for a moment the proposition ``For all $x$, $x>0$".  Is this proposition true or false?  The answer depends on what $x$'s we are taking \emph{all} of.  For example, if the universe of discourse is the set of integers, then the proposition is false.  However, if we take the universe of acceptable values to be the natural numbers, then the proposition is true.  We must be careful to avoid such ambiguities.  Often, the context can resolve such ambiguities, but otherwise, we need to write things like: ``For all $x\in\mathbb{Z}$, $x>0$" or ``For all $x\in\mathbb{N}$, $x>0$".
+A few additional remarks are in order.  We must take care to specify the universe of acceptable values for the free variables.  Consider for a moment, the proposition ``For all $x$, $x>0$".  Is this proposition true or false?  The answer depends on what $x$'s we are taking \emph{all} of.  For example, if the universe of discourse is the set of integers, then the statement is false.  However, if we take the universe of acceptable values to be the natural numbers, then the proposition is true.  We must be careful to avoid such ambiguities.  Often, the context can resolve such ambiguities, but otherwise, we need to write things like: ``For all $x\in\mathbb{Z}$, $x>0$" or ``For all $x\in\mathbb{N}$, $x>0$".
 
 \begin{exercise}
 Suppose our universe of acceptable values is the set of integers.
@@ -100,8 +100,3 @@ Suppose that the universe of acceptable values is the set of real numbers.  Cons
 \end{exercise}
 
 \end{section}
-
-%%% Local Variables: 
-%%% mode: latex
-%%% TeX-master: "IntroToProof"
-%%% End: 
